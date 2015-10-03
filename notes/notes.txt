@@ -1,5 +1,5 @@
 #Elixir as Inf
-
+User App
 $mkdir elixir_as_inf
 $cd elixir_as_inf/
 $rails new user_app --database=postgresql
@@ -12,3 +12,15 @@ export PGHOST=localhost
 
  $rake db:create
 $rake db:migrate
+
+
+Raw_Uploads App
+$cd ../..
+$git clone git://github.com/rails/rails.git
+$cd rails
+$bundle
+$bundle exec railties/exe/rails new ../elixir_as_inf/steps --api --edge --database=postgresql
+$bin/rails generate scaffold Step user_id:integer device_guid:string raw_data:json
+$rake db:create
+$rake db:migrate
+
