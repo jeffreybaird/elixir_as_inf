@@ -1,0 +1,14 @@
+#Elixir as Inf
+
+$mkdir elixir_as_inf
+$cd elixir_as_inf/
+$rails new user_app --database=postgresql
+$cd user_app
+$bin/rails generate scaffold User username:string password:string email:string
+
+Add this line to my bash_profile:
+
+export PGHOST=localhost
+
+ $rake db:create
+$rake db:migrate
