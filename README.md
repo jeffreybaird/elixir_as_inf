@@ -8,6 +8,6 @@ Current plan:
 First:
 * get them all working with seperate docker files
 * deploy
-Next: 
+Next:
 * set them up underneath the OTP supervisor pattern
 * demonstrate I can kill different parts of the system and show that it can self heal

@@ -23,4 +23,7 @@ $bundle exec railties/exe/rails new ../elixir_as_inf/steps --api --edge --databa
 $bin/rails generate scaffold Step user_id:integer device_guid:string raw_data:json
 $rake db:create
 $rake db:migrate
+$rails s
+
+$curl -H "Content-Type: application/json" -X POST -d '{"user_id": 2, "device_guid": "12345", "raw_data":"{\"data\":[{\"20151003\":500,\"20151005\":90,\"20151010\":1000}]}"}'   http://localhost:3000/steps
 
